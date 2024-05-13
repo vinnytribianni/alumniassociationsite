@@ -1,0 +1,12 @@
+/* General Navbar Styling */
+.main {
+    padding-top: 30px;
+    width: 100%;
+    font-family: platypi;
+    background-color: white;
+    min-height: 100vh;
+}
+.main img {
+    width: 100%;
+}
+  
