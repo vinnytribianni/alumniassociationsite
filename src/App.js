@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './Components/Navbar.js';
 import Home from './Pages/Home';
 import './CSS/App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
