@@ -8,11 +8,6 @@ const Navbar = () => {
   return (
     <div className="navbar">
 
-      <div className="top-banner">
-        <a href="mailto:info@AlphaRhoAlumniAssociation.org" className="email-link">info@AlphaRhoAlumniAssociation.org</a>
-        <div className="banner-quote">"Once a Chi Psi, Always a Chi Psi"</div>
-      </div>
-
       <div className="bottom-banner">
         <div>
           <DropdownButton id="dropdown-basic-button" title="History">
@@ -26,6 +21,14 @@ const Navbar = () => {
             <Dropdown.Item href="#/action-3">Alpha & Alumni Affairs</Dropdown.Item>
           </DropdownButton>
         </div>
+
+        <div className="logo">
+        <Link to="/Home">
+          <img src={Badge} alt="badge"></img>
+          <div> AP Alumni Association</div>
+        </Link>
+      </div>
+
         <div>
           <DropdownButton id="dropdown-basic-button" title="Events">
             <Dropdown.Item href="#/action-1">Annual Dart Tournament</Dropdown.Item>
@@ -36,13 +39,6 @@ const Navbar = () => {
             <Dropdown.Item href="#/action-2">Member Dues</Dropdown.Item>
           </DropdownButton>
         </div>
-      </div>
-
-      <div className="logo">
-        <Link to="/Home">
-          <img src={Badge} alt="badge"></img>
-          <div>Alpha Rho Alumni Association</div>
-        </Link>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@
     padding-top: 30px;
     width: 100%;
     font-family: platypi;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     min-height: 100vh;
 }
 .main img {
