@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
 
 
-.content-ourhistory, .content-rhoboat, .content-lostalum {
+.content {
     width: 90%;
     margin: 0 auto;
+    padding-top: 30px;
 }
 h1 {
     font-family: Platypi;
@@ -13,25 +14,8 @@ h2 {
     font-family: Platypi;
     font-size: 3vw;
 }
-h3 {
-    font-family: Platypi;
-    font-size: 1.7vw;
-    text-align: left;
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-.content-ourhistory p {
-    font-family: Platypi;
-    font-size: 1vw;
-    text-align: left;
-}
-.content-rhoboat p {
-    font-family: Platypi;
-    font-size: 1vw;
-    text-align: left;
-}
-.content-lostalum p {
-    font-family: Platypi;
-    font-size: 1vw;
-    text-align: center;
+.main img {
+    width: 100%;
+    margin: 0;
+    top: 0;
 }

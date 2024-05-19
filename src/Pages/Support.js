@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import PayPal from '../Images/paypal.png'
+import Lodge from '../Images/lodge_day.jpg'
+import '../CSS/Support.css'
 
 const Support = () => {
   const location = useLocation();
@@ -17,40 +20,58 @@ const Support = () => {
     switch(stateId) {
       case 1:
         return (
-          <div>
-            <h2>Support Content for ID 1</h2>
-            <p>This is the specific content for support in the first case.</p>
+          <div className='content'>
+            <h2>Donations</h2>
+            <br />
+            <p><b>Donating via Mail</b></p>
+            <p>The Alumni Association appreciates your gifts which can be made payable to:</p>
+            <p>"Alpha Rho Alumni Association" and mailed to the following address:</p>
+            <br />
+            <p>Alpha Rho Alumni Association</p>
+            <p>c/o Dr. Michael C. Illuzzi</p>
+            <p>114 College Avenue</p>
+            <p>New Brunswick, NJ 08901</p>
+            <br />
+            <p><b>Donating via PayPal</b></p>
+            <p>By selecting the Donate button below, you will be redirected to the PayPal website and an Alpha Rho Alumni Association donation page.</p>
+            <a href="https://www.paypal.com" rel="noreferrer" target='_blank'><img src={PayPal} alt="paypal link"></img></a>
+            <p><i>The Alpha Rho Alumni Association is a 501(c)(7) charitable organization. Gifts to the Alumni Association are not tax-deductible.</i></p>
           </div>
         );
       case 2:
         return (
-          <div>
-            <h2>Support Content for ID 2</h2>
-            <p>This content is displayed when the support ID is 2.</p>
-          </div>
-        );
-      case 3:
-        return (
-          <div>
-            <h2>Support Content for ID 3</h2>
-            <p>When the support ID is 3, this content appears on the screen.</p>
+          <div className='content'>
+            <h2>Member Dues</h2>
+            <p>Member dues content</p>
           </div>
         );
       default:
         return (
-          <div>
-            <h2>No specific support content</h2>
-            <p>No specific support content available for this ID.</p>
+          <div className='content'>
+            <h2>Donations</h2>
+            <br />
+            <p><b>Donating via Mail</b></p>
+            <p>The Alumni Association appreciates your gifts which can be made payable to:</p>
+            <p>"Alpha Rho Alumni Association" and mailed to the following address:</p>
+            <br />
+            <p>Alpha Rho Alumni Association</p>
+            <p>c/o Dr. Michael C. Illuzzi</p>
+            <p>114 College Avenue</p>
+            <p>New Brunswick, NJ 08901</p>
+            <br />
+            <p><b>Donating via PayPal</b></p>
+            <p>By selecting the Donate button below, you will be redirected to the PayPal website and an Alpha Rho Alumni Association donation page.</p>
+            <a href="https://www.paypal.com" rel="noreferrer" target='_blank'><img src={PayPal} alt="paypal link"></img></a>
+            <p><i>The Alpha Rho Alumni Association is a 501(c)(7) charitable organization. Gifts to the Alumni Association are not tax-deductible.</i></p>
           </div>
         );
     }
   };
 
   return (
-    <div>
-      <h1>Support Component</h1>
-      <p>Conditional rendering based on ID: {stateId}</p>
-      {renderContent()}
+    <div className="main">
+      <img src={Lodge} alt="lodge"></img>
+      {renderContent()} 
     </div>
   );
 };
