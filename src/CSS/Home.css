@@ -5,7 +5,7 @@
     width: 90%;
     margin: 0 auto;
 }
-.flexrow {
+.flexrow-home {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -33,27 +33,18 @@ h3 {
     padding-bottom: 20px;
     padding-top: 20px;
 }
-.content-ourhistory p {
-    font-family: Platypi;
-    font-size: 1vw;
-    text-align: left;
-}
-.content-rhoboat p {
-    font-family: Platypi;
-    font-size: 1vw;
-    text-align: left;
-}
-.content-lostalum p {
-    font-family: Platypi;
-    font-size: 1vw;
-    text-align: center;
-}
+
 .main img {
     width: 100%;
     padding-top: 7vw;
     margin: 0;
     top: 0;
 }
+.flexrow-home p {
+    max-width: 300px;
+    padding: 30px;
+}
+
 
 
   

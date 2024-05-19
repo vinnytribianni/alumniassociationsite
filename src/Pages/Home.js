@@ -1,6 +1,7 @@
 import React from 'react'
 import '../CSS/Home.css'
 import Lodge from '../Images/lodge_day.jpg'
+import Bones from '../Images/bones.jpeg'
 const Home = () => {
 
     return (
@@ -24,7 +25,11 @@ const Home = () => {
                 <p>- Roger M. Hawthorne, Bowdoin 1928</p>
                 <br />
                 <p><b>A Tribute to Fellowship</b></p>
-                <p>Alpha Rho Night, August 11, 1989 was also the occasion for a surprise presentation to H.G. 'Bones' Lundberg, P 1924. Herbert Dunmeyer, Rho 1954, the moving spirit of the Alumni Association Committee, made the presentation of an original sculpture depicting Bones with his hands on the shoulders of every Brother whose life he had touched. Sitting in with Bones, alongside the sculpture is Thomas Storr, #1, P 1990.</p>
+                <div className='flexrow-home'>
+                    <div><p>Alpha Rho Night, August 11, 1989 was also the occasion for a surprise presentation to H.G. 'Bones' Lundberg, P 1924. Herbert Dunmeyer, Rho 1954, the moving spirit of the Alumni Association Committee, made the presentation of an original sculpture depicting Bones with his hands on the shoulders of every Brother whose life he had touched. Sitting in with Bones, alongside the sculpture is Thomas Storr, #1, P 1990.</p></div>
+                    <div><img src={Bones} alt="Bones"></img></div>
+                </div>
+                
             </div>
         </div>
     );

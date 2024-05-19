@@ -4,6 +4,7 @@ import '../CSS/Footer.css';
 
 const Footer = () => {
   return (
+    <div>
     <footer className='footer'>  {/* Use semantic <footer> element */}
         <div className='footer-item'>
             <p><i>"Once a Chi Psi, Always a Chi Psi"</i></p>  {/* Ensure quotes are closed */}
@@ -15,6 +16,10 @@ const Footer = () => {
             <p>info@AlphaRhoAlumniAssociation.org</p>
         </div>
     </footer>
+    <br />
+    <p>© Copyright 2024 Alpha Rho Alumni Association | All Rights Reserved</p>
+    </div>
+  
   );
 };
 
