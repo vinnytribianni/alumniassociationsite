@@ -5,6 +5,7 @@ import History from './Pages/History'
 import Leadership from './Pages/Leadership'
 import Events from './Pages/Events'
 import Support from './Pages/Support'
+import Footer from './Components/Footer.js'
 import './CSS/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -19,8 +20,9 @@ function App() {
         <Route path="/leadership" element={<Leadership />} />
         <Route path="/events" element={<Events />} />
         <Route path="/support" element={<Support />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
