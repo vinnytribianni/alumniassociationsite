@@ -2,7 +2,6 @@
 
 /* General Navbar */
 
-
 /* Bottom Banner */
 .banner {
   font-family: 'Platypi', sans-serif;
@@ -13,6 +12,7 @@
   background-color: #CFB53B;
   height: 7vw; 
   width: 100%;
+  z-index: 100;
 }
 .logo {
   display: flex;        
@@ -79,4 +79,78 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+/* Toggle button styles */
+.menu-toggle {
+  display: none; /* Hide checkbox */
+}
+
+.sidebar-toggle {
+  display: none; /* Initially hide toggle button */
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1500;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #452c8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+  .banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 65px;
+    height: 65px;
+  }
+  .banner button {
+    font-size: 15px;
+  }
+  .logo a {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    background-color: #CFB53B; /* Ensure background color is the same as the rest of the layout */
+  }
+  .logo div {
+    font-size: 20px;
+  }
+  .option {
+    visibility: hidden;
+    background-color: #CFB53B;
+  }
+  .logo img {
+    width: 65px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+  }
+  .sidebar-toggle {
+    width: 60px;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    display: block;
+  }
+  .menu-toggle:checked ~ div{
+    width: 100%;
+    visibility: visible;
+  }
+  .menu-toggle:checked ~ .option {
+    visibility: visible;
+  }
+  .banner {
+    visibility: visible;
+  }
+  .banner div {
+    position: relative;
+    width: 100%;
+  }
 }

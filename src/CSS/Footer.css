@@ -18,8 +18,22 @@
 
 .footer p {
     color: white;
+    font-size: 1.2vw;
 }
 
 .footer img {
-    width: 15vw;
+    width: 20vw;
+    min-width: 200px;
+}
+p {
+    font-size: 1.2vw;
+}
+
+@media (max-width: 800px) {
+    .footer p {
+        visibility: hidden;
+    }
+    p {
+        font-size: 2vw;
+    }
 }
