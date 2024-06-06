@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Lodge from '../Images/lodge_day.jpg'
-import '../CSS/Events.css'
+import golf from "../Images/golf.jpg";
+import '../CSS/Events.css';
+
 
 const Events = () => {
   const location = useLocation();
@@ -53,9 +55,16 @@ const Events = () => {
       case 2:
         return (
           <div className='content'>
-            <h2>Annual Golf Tournament</h2>
+            <h2>Annual Scramble Golf Tournament</h2>
             <p><b>About</b></p>
+            <p>A new and exciting tradition has begun at Alpha Rho following the inaugural Rho Scramble golf tournament held on April 26th, 2024. Brothers old and young gathered together at the Rutgers University golf course for a day filled with great weather, golf, beers, and fun. Nearly 100 brothers participated in the first annual tournament, making it a great success.</p>
+            <p>This event was set up by the active brothers with alumni assistance. The actives of Alpha Rho are very appreciative of the support and generosity from the alumni.</p>
+            <p>This is an event that the actives hope to repeat each year in the late spring, and we hope that you’ll join us next year for the outing and dinner following.</p>
             <p><b>All-Time Results</b></p>
+            <p>2024 / 1st Annual Overall - "The Doge" 64 (-7)</p>
+            <p>2024 / 1st Annual Undergrad - "Shadow Wizard Money Gang" 69 (-2)</p>
+            <img src={golf} alt="golf"></img>
+
           </div>
         );
       default:

@@ -6,6 +6,7 @@
     margin: 0 auto;
     padding-top: 30px;
 }
+
 h1 {
     font-family: Platypi;
     font-size: 3.5vw;
@@ -19,4 +20,11 @@ h2 {
     padding-top: 7vw;
     margin: 0;
     top: 0;
+}
+.buttons button {
+    border-radius: 7px;
+    background-color: white;
+}
+.buttons button:hover {
+    background-color: #CFB53B;
 }

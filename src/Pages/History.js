@@ -1,12 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import '../CSS/History.css'
-import Lodge from '../Images/lodge_day.jpg'
+import { Worker, Viewer } from '@react-pdf-viewer/core';
+import '@react-pdf-viewer/core/lib/styles/index.css';
+import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
+import '@react-pdf-viewer/default-layout/lib/styles/index.css';
+import '../CSS/History.css';
+import Lodge from '../Images/lodge_day.jpg';
+import RhoBoat2324 from '../RhoBoats/RhoBoat23-24.pdf';
+import RhoBoat2223 from '../RhoBoats/RhoBoat22-23.pdf';
+import RhoBoat20 from '../RhoBoats/RhoBoat20.pdf';
+
 
 const History = () => {
   const location = useLocation();
   const { id } = location.state || {}; // Ensure this is being passed correctly
   const [stateId, setStateId] = useState(parseInt(id, 10)); // Convert to number and set as initial state
+  const [preview, setPreview] = useState(null); // State for preview content
+  const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
   useEffect(() => {
     // Check if id is present and is different from current stateId
@@ -14,11 +24,11 @@ const History = () => {
     if (newId && newId !== stateId) {
       setStateId(newId);
     }
-  }, [id, stateId]); 
+  }, [id, stateId]);
 
   // Function to render content based on stateId
   const renderContent = () => {
-    switch(stateId) {
+    switch (stateId) {
       case 1:
         return (
           <div className="content">
@@ -48,11 +58,39 @@ const History = () => {
             <h2>RhoBoat</h2>
             <br />
             <p><b>About</b></p>
-            <p>The RhoBoat has been published since 1925...</p>
+            <p>Since 1925, the Rho Boat has been an annual collection that captures the essence of the brotherhood for the academic year. It reflects the fraternity's memories, events, and accomplishments from the fall and spring semesters. It includes messages from current and past leaders, highlights from social and philanthropic activities, and personal anecdotes from fraternity members.</p>
             <p><b>Past Years</b></p>
-            <p>Links to past years RhoBoats</p>
+            <div className="buttons">
+              <button onClick={() => setPreview('2023-2024')}>2023-2024</button>
+              <br /><br />
+              <button onClick={() => setPreview('2022-2023')}>2022-2023</button>
+              <br /><br />
+              <button onClick={() => setPreview('2020')}>2020</button>
+
+            </div>
+            {preview && (
+              <div className="preview">
+                <h3>Document Preview</h3>
+                {preview === '2023-2024' && (
+                  <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}>
+                    <Viewer fileUrl={RhoBoat2324} plugins={[defaultLayoutPluginInstance]} />
+                  </Worker>
+                )}
+                {preview === '2022-2023' && (
+                  <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}>
+                    <Viewer fileUrl={RhoBoat2223} plugins={[defaultLayoutPluginInstance]} />
+                  </Worker>               
+                )}
+                {preview === '2020' && (
+                  <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}>
+                    <Viewer fileUrl={RhoBoat20} plugins={[defaultLayoutPluginInstance]} />
+                  </Worker>               
+                )}
+              </div>
+            )}
           </div>
         );
+
       case 3:
         return (
           <div className="content">
@@ -90,10 +128,9 @@ const History = () => {
   return (
     <div className="main">
       <img src={Lodge} alt="lodge"></img>
-      {renderContent()} 
+      {renderContent()}
     </div>
   );
 };
 
 export default History;
-
