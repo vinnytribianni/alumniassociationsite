@@ -10,13 +10,13 @@ import RhoBoat2324 from '../RhoBoats/RhoBoat23-24.pdf';
 import RhoBoat2223 from '../RhoBoats/RhoBoat22-23.pdf';
 import RhoBoat20 from '../RhoBoats/RhoBoat20.pdf';
 
-
 const History = () => {
   const location = useLocation();
   const { id } = location.state || {}; // Ensure this is being passed correctly
   const [stateId, setStateId] = useState(parseInt(id, 10)); // Convert to number and set as initial state
   const [preview, setPreview] = useState(null); // State for preview content
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
+
 
   useEffect(() => {
     // Check if id is present and is different from current stateId
@@ -49,13 +49,27 @@ const History = () => {
             <p>Alpha Rho lost its charter in 1999 due to a series of mishaps that reflected so poorly on Chi Psi that both the local alpha alumni association and the national had no choice but to close it. Indeed, liability insurance premiums increased beyond the point where the actives could afford the payments. The death of Bones Lundberg and the simultaneous retirement of Vince LeBlon, P 1977, and Henry Bignell, P 1977, from active service on behalf of the alpha left a visible void in the alumni leadership which may have indirectly led to an Alpha that was “floundering” to say the least.</p>
             <p>Thus, when the Chi Psi National Convention rendered the alpha dormant it was naturally a sad day for Alpha Rho and its one thousand living alumni. Almost immediately, however, the alumni took charge in focusing on the refounding with Moly Hung, P 1988, and Doug Kortrey, P 1988 taking the lead. And in January 2004 the Alpha‘s alumni hosted fifty prospects in the living room of the Lodge while over eighty alumni Brothers stood in the foyer of the Lodge and listened to Mike Illuzzi, P 1977, give a talk about what Chi Psi represents and why they should consider joining this fraternity at this time in its history. With help from Jon Carnegie, P 1988, and John Logan, Epsilon Delta 1989, who relocated with his wife to New Jersey, two pledge classes were formed and in August 2004 the National Convention approved Rho’s application for full Alpha status.</p>
             <p>On January 15, 2005 the Alpha celebrated its refounding by initiating its initial pledge class under the able direction of Bill Royce, P 1978, who has conducted ceremonies at Alpha Rho since 1980. Thus, in just over five years Alpha Rho traveled from dormancy to vibrancy and it is no doubt true that such an adventure would not have taken place without its alumni; alumni who take to heart the adage, ”Once a Chi Psi, Always a Chi Psi.”</p>
-            <p>Rutgers has changed significantly over the years – experiencing the admission of women, designation as the state university and growth in undergraduate enrollment – but the role of Alpha Rho has remained the same: providing each Rho man a spiritual strength and physical base on a large and often impersonal University.</p>
+            <p>Rutgers has changed significantly over the years – experiencing the admission of women, designation as the state university and growth in undergraduate enrollment – but the role of Alpha Rho has remained the same: providing each Rho man a spiritual strength and physical base on a large and often impersonal University.</p>        
           </div>
         );
       case 2:
         return (
           <div className="content">
-            <h2>RhoBoat</h2>
+            <h2>Archives</h2>
+            <br />
+            <iframe
+            src={"https://drive.google.com/embeddedfolderview?id=1ZKQZ7h_v8jlrekFmwgG0cdmqnHT3rMNG#list"}
+            width="100%"
+            height="500"
+            style={{ border: 'none' }}
+            title="Google Drive File"
+          ></iframe> 
+          </div>
+        )
+      case 3:
+        return (
+          <div className="content">
+            <h2>Rho Boat</h2>
             <br />
             <p><b>About</b></p>
             <p>Since 1925, the Rho Boat has been an annual collection that captures the essence of the brotherhood for the academic year. It reflects the fraternity's memories, events, and accomplishments from the fall and spring semesters. It includes messages from current and past leaders, highlights from social and philanthropic activities, and personal anecdotes from fraternity members.</p>
@@ -91,7 +105,7 @@ const History = () => {
           </div>
         );
 
-      case 3:
+      case 4:
         return (
           <div className="content">
             <h2>Lost Alumni</h2>
