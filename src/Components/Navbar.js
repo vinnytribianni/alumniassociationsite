@@ -26,7 +26,7 @@ const Navbar = () => {
         <DropdownButton id="dropdown-history-button" title="History" className="dropdown">
           <Dropdown.Item onClick={() => nav('1', 'history')}>Our History</Dropdown.Item>
           <Dropdown.Item onClick={() => nav('2', 'history')}>Archives</Dropdown.Item>
-          <Dropdown.Item onClick={() => nav('3', 'history')}>RhoBoat</Dropdown.Item>
+          <Dropdown.Item onClick={() => nav('3', 'history')}>Rho Boat</Dropdown.Item>
           <Dropdown.Item onClick={() => nav('4', 'history')}>Lost Alumni</Dropdown.Item>
         </DropdownButton>
       </div>
@@ -51,8 +51,7 @@ const Navbar = () => {
       </div>
       <div className='option'>
         <DropdownButton id="dropdown-support-button" title="Support" className="dropdown">
-          <Dropdown.Item onClick={() => nav('1', 'support')}>Donate</Dropdown.Item>
-          <Dropdown.Item onClick={() => nav('2', 'support')}>Member Dues</Dropdown.Item>
+          <Dropdown.Item onClick={() => nav('1', 'support')}>Member Dues and Other Donations</Dropdown.Item>
         </DropdownButton>
       </div>
     </div>
