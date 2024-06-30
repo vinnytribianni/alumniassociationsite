@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
 
-
 .content-ourhistory, .content-rhoboat, .content-lostalum {
     width: 90%;
     margin: 0 auto;
+    max-width: 1200px; /* Added max-width for better layout control */
 }
 .flexrow {
     display: flex;
@@ -11,7 +11,7 @@
     justify-content: center;
 }
 .box {
-    padding: 20px;
+    padding: 10px;
 }
 .content {
     padding-top: 30px;
@@ -33,24 +33,44 @@ h3 {
     padding-bottom: 20px;
     padding-top: 20px;
 }
-.content-ourhistory p {
-    font-family: Platypi;
-    font-size: 1vw;
-    text-align: left;
-}
-.content-rhoboat p {
-    font-family: Platypi;
-    font-size: 1vw;
-    text-align: left;
-}
-.content-lostalum p {
-    font-family: Platypi;
-    font-size: 1vw;
-    text-align: center;
-}
 .main img {
     width: 100%;
     padding-top: 7vw;
     margin: 0;
     top: 0;
+}
+
+/* Mobile-only adjustments */
+@media only screen and (max-width: 768px) {
+    .flexrow {
+        flex-direction: column;
+        align-items: center;
+    }
+    .content {
+        padding-top: 20px;
+        width: 95%;
+    }
+    h1 {
+        font-size: 6vw;
+    }
+    h2 {
+        font-size: 5vw;
+    }
+    h3 {
+        font-size: 4vw;
+    }
+    .main img {
+        padding-top: 60px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 8vw;
+    }
+    h2 {
+        font-size: 7vw;
+    }
+    h3 {
+        font-size: 5vw;
+    }
 }

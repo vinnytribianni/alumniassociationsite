@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
 
-
 .content {
     width: 90%;
     margin: 0 auto;
@@ -22,9 +21,23 @@ h2 {
     top: 0;
 }
 .buttons button {
+    font-size: 1.5vw;
     border-radius: 7px;
     background-color: white;
 }
 .buttons button:hover {
     background-color: #CFB53B;
+}
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 8vw;
+    }
+    h2 {
+        font-size: 7vw;
+    }
+    .buttons button {
+        font-size: 5vw;
+        padding: 8px 16px;
+    }
 }
