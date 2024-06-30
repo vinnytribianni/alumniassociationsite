@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.596c828d.css",
+    "main.js": "/static/js/main.ac7ae55f.js",
+    "static/js/453.0c88ba75.chunk.js": "/static/js/453.0c88ba75.chunk.js",
+    "static/media/RhoBoat20.pdf": "/static/media/RhoBoat20.3a4e72c0cc9f29ea42dc.pdf",
+    "static/media/lodge_day.jpg": "/static/media/lodge_day.292c583540a4f3da02c5.jpg",
+    "static/media/golf.jpg": "/static/media/golf.e7d528b5762a4fa04538.jpg",
+    "static/media/RhoBoat22-23.pdf": "/static/media/RhoBoat22-23.d6af0506ae7ac2cb5a3a.pdf",
+    "static/media/RhoBoat23-24.pdf": "/static/media/RhoBoat23-24.45d89615feeaaa14c405.pdf",
+    "static/media/Badge.png": "/static/media/Badge.7148b3b0cda5d4b6e27a.png",
+    "static/media/bones.jpeg": "/static/media/bones.e7b41ebbf4b19dd8b8d0.jpeg",
+    "static/media/chi_psi.jpeg": "/static/media/chi_psi.fd4b11dc0ea73d0295a3.jpeg",
+    "index.html": "/index.html",
+    "main.596c828d.css.map": "/static/css/main.596c828d.css.map",
+    "main.ac7ae55f.js.map": "/static/js/main.ac7ae55f.js.map",
+    "453.0c88ba75.chunk.js.map": "/static/js/453.0c88ba75.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.596c828d.css",
+    "static/js/main.ac7ae55f.js"
+  ]
+}
